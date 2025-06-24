@@ -169,9 +169,16 @@ require('lazy').setup({
     end,
   },
 
+  -- R Plugin
+  {
+    'R-nvim/R.nvim',
+    -- Only required if you also set defaults.lazy = true
+    lazy = false,
+  },
+
   -- Java Plugin
   {
-    'nvim-java/nvim-java',
+    'mfussenegger/nvim-jdtls',
   },
   --  File Tree Plugin
 
@@ -838,7 +845,25 @@ require('lazy').setup({
     main = 'nvim-treesitter.configs', -- Sets main module to use for opts
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     opts = {
-      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'python' },
+      ensure_installed = {
+        'bash',
+        'c',
+        'diff',
+        'html',
+        'lua',
+        'luadoc',
+        'markdown',
+        'markdown_inline',
+        'query',
+        'vim',
+        'vimdoc',
+        'python',
+        'r',
+        'rnoweb',
+        'yaml',
+        'latex',
+        'csv',
+      },
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
