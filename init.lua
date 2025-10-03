@@ -125,9 +125,9 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
--- NOTE: Here is where you install your plugins.
+-- PLUGIN_ADD_HERE
+
 require('lazy').setup({
-  -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
 
   { -- Adds git related signs to the gutter, as well as utilities for managing changes
@@ -169,17 +169,6 @@ require('lazy').setup({
     end,
   },
 
-  -- R Plugin
-  {
-    'R-nvim/R.nvim',
-    -- Only required if you also set defaults.lazy = true
-    lazy = false,
-  },
-
-  -- Java Plugin
-  {
-    'mfussenegger/nvim-jdtls',
-  },
   --  File Tree Plugin
 
   {
@@ -383,7 +372,8 @@ require('lazy').setup({
     end,
   },
 
-  -- LSP Plugins
+  -- LSP_START
+
   {
     -- `lazydev` configures Lua LSP for your Neovim config, runtime and plugins
     -- used for completion, annotations and signatures of Neovim apis
@@ -396,6 +386,7 @@ require('lazy').setup({
       },
     },
   },
+
   {
     -- Main LSP Configuration
     'neovim/nvim-lspconfig',
@@ -561,18 +552,12 @@ require('lazy').setup({
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
-        -- clangd = {},
-        -- gopls = {},
-        -- pyright = {},
-        -- rust_analyzer = {},
-        -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
-        --
-        -- Some languages (like typescript) have entire language plugins that can be useful:
-        --    https://github.com/pmizio/typescript-tools.nvim
-        --
-        -- But for many setups, the LSP (`ts_ls`) will work just fine
-        -- ts_ls = {},
-        --
+        clangd = {},
+
+        pyright = {},
+
+        texlab = {},
+
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
