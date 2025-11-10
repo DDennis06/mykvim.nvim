@@ -60,6 +60,9 @@ vim.opt.splitbelow = true
 --  and `:help 'listchars'`
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt['tabstop'] = 4
+vim.opt['shiftwidth'] = 4
+vim.opt['softtabstop'] = 4
 
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = 'split'
@@ -361,9 +364,9 @@ require('lazy').setup({
       end, { desc = '[S]earch [/] in Open Files' })
 
       -- Shortcut for searching your Neovim configuration files
-      vim.keymap.set('n', '<leader>st', function()
-        builtin.find_files { cwd = 'C:/Users/damo0/Documents/TDEV/Python-Swiss-Tournament-Program' }
-      end, { desc = '[S]earch [t]ournament files' })
+      vim.keymap.set('n', '<leader>smn', function()
+        builtin.find_files { cwd = '~/Library/CloudStorage/GoogleDrive-damoden06@gmail.com/My Drive/Notes/' }
+      end, { desc = '[S]earch [m]ac [n]otes' })
 
       -- Shortcut for searching your Neovim configuration files
       vim.keymap.set('n', '<leader>sn', function()
