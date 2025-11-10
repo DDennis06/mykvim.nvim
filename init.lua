@@ -849,7 +849,6 @@ require('lazy').setup({
         'r',
         'rnoweb',
         'yaml',
-        'latex',
         'csv',
       },
       -- Autoinstall languages that are not installed
