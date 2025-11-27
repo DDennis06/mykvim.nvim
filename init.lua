@@ -160,6 +160,11 @@ require('lazy').setup({
   -- Then, because we use the `opts` key (recommended), the configuration runs
   -- after the plugin has been loaded as `require(MODULE).setup(opts)`.
 
+  -- PLUGINS START HERE!!!
+
+  -- Template Plugin
+  { 'otavioschwanck/new-file-template.nvim', opts = {} },
+
   -- Latex plugins
 
   {
@@ -378,6 +383,11 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>smn', function()
         builtin.find_files { cwd = '~/Library/CloudStorage/GoogleDrive-damoden06@gmail.com/My Drive/Notes/' }
       end, { desc = '[S]earch [m]ac [n]otes' })
+
+      -- Shortcut for opening tree
+      vim.keymap.set('n', '<leader>to', function()
+        vim.cmd { cmd = 'NvimTreeOpen' }
+      end, { desc = '[T]ree [O]pen' })
 
       -- Shortcut for searching your Neovim configuration files
       vim.keymap.set('n', '<leader>sn', function()
