@@ -162,6 +162,25 @@ require('lazy').setup({
 
   -- PLUGINS START HERE!!!
 
+  -- Tab bar plugin
+  {
+    'romgrk/barbar.nvim',
+    dependencies = {
+      'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
+      'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
+    },
+    init = function()
+      vim.g.barbar_auto_setup = false
+    end,
+    opts = {
+      -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
+      -- animation = true,
+      -- insert_at_start = true,
+      -- …etc.
+    },
+    version = '^1.0.0', -- optional: only update when a new 1.x version is released
+  },
+
   -- Template Plugin
   { 'otavioschwanck/new-file-template.nvim', opts = {} },
 
@@ -701,6 +720,7 @@ require('lazy').setup({
               require('luasnip-latex-snippets').setup()
               -- or setup({ use_treesitter = true })
               require('luasnip').config.setup { enable_autosnippets = true }
+              require('luasnip.loaders.from_snipmate').lazy_load { paths = vim.fn.stdpath 'config' .. '/snippets' }
             end,
           },
         },
