@@ -1,7 +1,7 @@
 -- load settings
-require 'lua.settings'
+require 'setup.settings'
 -- load key mappings
-require 'lua.map'
+require 'setup.map'
 
 -- Highlight when yanking (copying) text
 vim.api.nvim_create_autocmd('TextYankPost', {
