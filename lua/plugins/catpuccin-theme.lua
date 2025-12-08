@@ -10,13 +10,15 @@ return {
       auto_integrations = true,
       highlight_overrides = {
         all = function(mocha)
+          local base = mocha.base
+          local darken = require('catppuccin.utils.colors').darken
           return {
             rainbow3 = { fg = mocha.pink },
             RenderMarkDownH3 = { fg = mocha.pink },
-            RenderMarkDownH3Bg = { fg = mocha.pink },
+            RenderMarkDownH3Bg = { bg = darken(mocha.pink, 0.3, base) },
             rainbow4 = { fg = mocha.mauve },
             RenderMarkDownH4 = { fg = mocha.mauve },
-            RenderMarkDownH4Bg = { fg = mocha.mauve },
+            RenderMarkDownH4Bg = { bg = darken(mocha.mauve, 0.3, base) },
           }
         end,
       },
