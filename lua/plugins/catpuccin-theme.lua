@@ -3,7 +3,6 @@ return {
     'catppuccin/nvim',
     name = 'catppuccin',
     -- Load the colorscheme here.
-    -- You can configure highlights by doing something like:
     opts = {
       transparent_background = true,
       render_markdown = true,
@@ -13,17 +12,17 @@ return {
           local base = mocha.base
           local darken = require('catppuccin.utils.colors').darken
           return {
-            rainbow1 = { fg = mocha.rosewater, bg = mocha.rosewater },
-            rainbow2 = { fg = mocha.flamingo, bg = mocha.flamingo },
-            rainbow3 = { fg = mocha.pink, bg = mocha.pink },
-            rainbow4 = { fg = mocha.mauve, bg = mocha.mauve },
-            rainbow5 = { fg = mocha.red, bg = mocha.red },
+            rainbow1 = { fg = mocha.rosewater, bg = darken(mocha.rosewater, 0.3, base) },
+            rainbow2 = { fg = mocha.flamingo, bg = darken(mocha.flamingo, 0.3, base) },
+            rainbow3 = { fg = mocha.pink, bg = darken(mocha.pink, 0.3, base) },
+            rainbow4 = { fg = mocha.mauve, bg = darken(mocha.mauve, 0.3, base) },
+            rainbow5 = { fg = mocha.red, bg = darken(mocha.red, 0.3, base) },
 
-            RenderMarkDownH1 = { fg = mocha.rosewater, bg = mocha.rosewater },
-            RenderMarkDownH2 = { fg = mocha.flamingo, bg = mocha.flamingo },
-            RenderMarkDownH3 = { fg = mocha.pink, bg = mocha.pink },
-            RenderMarkDownH4 = { fg = mocha.mauve, bg = mocha.mauve },
-            RenderMarkDownH5 = { fg = mocha.red, bg = mocha.red },
+            RenderMarkDownH1 = { fg = mocha.rosewater, bg = darken(mocha.rosewater, 0.3, base) },
+            RenderMarkDownH2 = { fg = mocha.flamingo, bg = darken(mocha.flamingo, 0.3, base) },
+            RenderMarkDownH3 = { fg = mocha.pink, bg = darken(mocha.pink, 0.3, base) },
+            RenderMarkDownH4 = { fg = mocha.mauve, bg = darken(mocha.mauve, 0.3, base) },
+            RenderMarkDownH5 = { fg = mocha.red, bg = darken(mocha.red, 0.3, base) },
 
             RenderMarkDownH1Bg = { bg = darken(mocha.rosewater, 0.3, base) },
             RenderMarkDownH2Bg = { bg = darken(mocha.flamingo, 0.3, base) },
