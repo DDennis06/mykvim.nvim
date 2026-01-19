@@ -24,11 +24,11 @@ return {
             RenderMarkDownH4 = { fg = mocha.mauve, bg = darken(mocha.mauve, 0.3, base) },
             RenderMarkDownH5 = { fg = mocha.red, bg = darken(mocha.red, 0.3, base) },
 
-            RenderMarkDownH1Bg = { bg = darken(mocha.rosewater, 0.3, base) },
-            RenderMarkDownH2Bg = { bg = darken(mocha.flamingo, 0.3, base) },
-            RenderMarkDownH3Bg = { bg = darken(mocha.pink, 0.3, base) },
-            RenderMarkDownH4Bg = { bg = darken(mocha.mauve, 0.3, base) },
-            RenderMarkDownH5Bg = { bg = darken(mocha.red, 0.3, base) },
+            RenderMarkDownH1Bg = { fg = mocha.none, bg = mocha.none },
+            RenderMarkDownH2Bg = { fg = mocha.none, bg = mocha.none },
+            RenderMarkDownH3Bg = { fg = mocha.none, bg = mocha.none },
+            RenderMarkDownH4Bg = { fg = mocha.none, bg = mocha.none },
+            RenderMarkDownH5Bg = { fg = mocha.none, bg = mocha.none },
           }
         end,
       },
