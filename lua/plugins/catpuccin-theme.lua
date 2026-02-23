@@ -5,33 +5,7 @@ return {
     -- Load the colorscheme here.
     opts = {
       transparent_background = true,
-      render_markdown = true,
       auto_integrations = true,
-      highlight_overrides = {
-        all = function(mocha)
-          local base = mocha.base
-          local darken = require('catppuccin.utils.colors').darken
-          return {
-            RenderMarkDownH1Bg = { fg = mocha.none, bg = darken(mocha.rosewater, 0.3, base) },
-            RenderMarkDownH2Bg = { fg = mocha.none, bg = darken(mocha.flamingo, 0.3, base) },
-            RenderMarkDownH3Bg = { fg = mocha.none, bg = darken(mocha.pink, 0.3, base) },
-            RenderMarkDownH4Bg = { fg = mocha.none, bg = darken(mocha.mauve, 0.3, base) },
-            RenderMarkDownH5Bg = { fg = mocha.none, bg = darken(mocha.red, 0.3, base) },
-
-            RenderMarkDownH1 = { fg = mocha.rosewater, bg = darken(mocha.rosewater, 0.3, base) },
-            RenderMarkDownH2 = { fg = mocha.flamingo, bg = darken(mocha.flamingo, 0.3, base) },
-            RenderMarkDownH3 = { fg = mocha.pink, bg = darken(mocha.pink, 0.3, base) },
-            RenderMarkDownH4 = { fg = mocha.mauve, bg = darken(mocha.mauve, 0.3, base) },
-            RenderMarkDownH5 = { fg = mocha.red, bg = darken(mocha.red, 0.3, base) },
-
-            rainbow1 = { fg = mocha.rosewater, bg = darken(mocha.rosewater, 0.3, base) },
-            rainbow2 = { fg = mocha.flamingo, bg = darken(mocha.flamingo, 0.3, base) },
-            rainbow3 = { fg = mocha.pink, bg = darken(mocha.pink, 0.3, base) },
-            rainbow4 = { fg = mocha.mauve, bg = darken(mocha.mauve, 0.3, base) },
-            rainbow5 = { fg = mocha.red, bg = darken(mocha.red, 0.3, base) },
-          }
-        end,
-      },
     },
   },
 }
